@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pyc
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Data (keep only raw/README.md)
+data/raw/*
+!data/raw/README.md
+data/processed/*
+data/hard_cases/*
+
+# Models and results
+models/
+results/
+
+# Tools
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# Experiment tracking
+wandb/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+models/**/*.safetensors
+
+# Claude Code local (personal harness settings, not shared)
+.claude/
+
+# Local-only archive of dev scripts / superseded intermediates (never pushed)
+_archive/
+external/CRAG/
+external/CRAG/
+data/cache/

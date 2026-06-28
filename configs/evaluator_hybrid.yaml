@@ -1,0 +1,18 @@
+# DOCUMENTATION ONLY — not loaded by any code. Authoritative values live in
+# src/thesis_crag/evaluators/hybrid.py and scripts/. Records the config the
+# deployed hybrid evaluator was actually run with.
+evaluator: hybrid
+first_stage:
+  # Deployed first stage is the fine-tuned cross-encoder, NOT the pretrained base.
+  model_name: models/cross_encoder_v2
+  base_model: cross-encoder/ms-marco-MiniLM-L-12-v2
+second_stage:
+  model_name: claude-haiku-4-5-20251001
+  max_retries: 8          # network/rate-limit retries in call_llm_with_validation
+ambiguity_band:
+  low: 0.2                 # CE score <= low  -> INCORRECT (CE-decisive, no LLM call)
+  high: 0.8                # CE score >= high -> CORRECT   (CE-decisive, no LLM call)
+correct_threshold: 0.5     # final score >= this -> CORRECT
+incorrect_threshold: 0.2   # final score <  this -> INCORRECT
+retriever:
+  top_k: 10               # matches full-PopQA N_DOCS

@@ -1,0 +1,12 @@
+# DOCUMENTATION ONLY — not loaded by any code. The authoritative values live in
+# the source (src/thesis_crag/evaluators/t5_baseline.py) and scripts/. This file
+# records the configuration the T5 baseline was actually run with, for reference.
+evaluator: t5_baseline
+# The fine-tuned CRAG T5-large evaluator from Yan et al. 2024 (NOT base flan-t5-large).
+model_name: external/CRAG/models/evaluator
+base_architecture: t5-large
+correct_threshold: 0.592     # logit >= this -> CORRECT (T5Evaluator.UPPER_THRESHOLD)
+incorrect_threshold: -0.995  # logit <  this -> INCORRECT (T5Evaluator.LOWER_THRESHOLD)
+quantization: int8           # results reported under dynamic INT8 quantization
+retriever:
+  top_k: 10                  # passages scored per question (N_DOCS), matches Phase 1/full PopQA

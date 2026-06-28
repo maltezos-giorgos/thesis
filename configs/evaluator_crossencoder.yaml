@@ -1,0 +1,11 @@
+# DOCUMENTATION ONLY — not loaded by any code. Authoritative values live in
+# src/thesis_crag/evaluators/cross_encoder.py and scripts/. Records the config
+# the deployed cross-encoder evaluator was actually run with.
+evaluator: cross_encoder
+# Deployed evaluator is the fine-tuned model, NOT the pretrained base.
+model_name: models/cross_encoder_v2
+base_model: cross-encoder/ms-marco-MiniLM-L-12-v2
+correct_threshold: 0.5   # sigmoid prob >= this -> CORRECT
+incorrect_threshold: 0.2 # sigmoid prob <  this -> INCORRECT (code default; was 0.5 here)
+retriever:
+  top_k: 10              # matches full-PopQA N_DOCS

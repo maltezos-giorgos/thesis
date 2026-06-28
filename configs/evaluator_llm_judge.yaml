@@ -1,0 +1,12 @@
+# DOCUMENTATION ONLY — not loaded by any code. Authoritative values live in
+# src/thesis_crag/evaluators/llm_judge.py and src/thesis_crag/utils/llm_clients.py.
+# Records the config the LLM-as-Judge evaluator was actually run with.
+evaluator: llm_judge
+model_name: claude-haiku-4-5-20251001
+prompt_variant: WITH_NEGATIVE_EXAMPLES   # variant used for the reported results
+correct_threshold: 0.7    # relevance score >= this -> CORRECT
+incorrect_threshold: 0.3  # relevance score <  this -> INCORRECT
+validation_retries: 3     # JSON/schema retries in LLMJudgeEvaluator.score (stop_after_attempt=3)
+network_retries: 8        # rate-limit/server retries in call_llm_with_validation
+retriever:
+  top_k: 10               # matches full-PopQA N_DOCS
