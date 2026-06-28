@@ -55,4 +55,3 @@ models/**/*.safetensors
 _archive/
 external/CRAG/
 external/CRAG/
-data/cache/
