@@ -146,5 +146,4 @@ make format   # black + ruff --fix
 
 ## Citation
 
-If you reference this work, please cite the thesis (details in the Overleaf
-source) and the underlying CRAG paper (Yan et al. 2024, arXiv:2401.15884).
+If you reference this work, please cite the thesis and the underlying CRAG paper (Yan et al. 2024, arXiv:2401.15884).
