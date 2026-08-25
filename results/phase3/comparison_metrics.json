@@ -1,0 +1,32 @@
+{
+  "n_cases": 136,
+  "t5_trap_detection": 0.9559,
+  "llm_trap_detection": 0.8529,
+  "t5_gold_recall": 0.5809,
+  "llm_gold_recall": 0.9191,
+  "t5_fpr_trap": 0.0441,
+  "llm_fpr_trap": 0.1471,
+  "per_trap_type": {
+    "topic_overlap": {
+      "total": 66,
+      "t5_trap_detection": 0.9394,
+      "llm_trap_detection": 0.8333,
+      "t5_gold_recall": 0.6212,
+      "llm_gold_recall": 0.9545
+    },
+    "entity_alias": {
+      "total": 26,
+      "t5_trap_detection": 0.9231,
+      "llm_trap_detection": 0.6538,
+      "t5_gold_recall": 0.5,
+      "llm_gold_recall": 0.8846
+    },
+    "unknown": {
+      "total": 44,
+      "t5_trap_detection": 1.0,
+      "llm_trap_detection": 1.0,
+      "t5_gold_recall": 0.5682,
+      "llm_gold_recall": 0.8864
+    }
+  }
+}

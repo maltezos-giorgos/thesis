@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "n_cases": 212,
+    "n_boot": 1000,
+    "boot_seed": 0,
+    "contamination_distractors": 28,
+    "contamination_cases": 23,
+    "corrections": {
+      "C1": "expected-value ranking metrics under uniform random tie-breaking",
+      "C2": "drop LLM-verified answer-containing 'irrelevant' distractors before ranking"
+    }
+  },
+  "evaluators": {
+    "T5": {
+      "label": "T5",
+      "as_reported": {
+        "precision_at_1": 0.7972,
+        "recall_at_2": 0.9009,
+        "mrr": 0.8785
+      },
+      "corrected": {
+        "precision_at_1": {
+          "point": 0.816,
+          "ci_lo": 0.7594,
+          "ci_hi": 0.8679
+        },
+        "recall_at_2": {
+          "point": 0.9104,
+          "ci_lo": 0.8679,
+          "ci_hi": 0.9481
+        },
+        "mrr": {
+          "point": 0.8903,
+          "ci_lo": 0.8561,
+          "ci_hi": 0.9218
+        }
+      },
+      "delta": {
+        "precision_at_1": 0.0189,
+        "recall_at_2": 0.0094,
+        "mrr": 0.0118
+      }
+    },
+    "LLM": {
+      "label": "LLM Judge",
+      "as_reported": {
+        "precision_at_1": 0.9104,
+        "recall_at_2": 0.9764,
+        "mrr": 0.9509
+      },
+      "corrected": {
+        "precision_at_1": {
+          "point": 0.9006,
+          "ci_lo": 0.8616,
+          "ci_hi": 0.9363
+        },
+        "recall_at_2": {
+          "point": 0.9693,
+          "ci_lo": 0.9481,
+          "ci_hi": 0.9882
+        },
+        "mrr": {
+          "point": 0.944,
+          "ci_lo": 0.9228,
+          "ci_hi": 0.9643
+        }
+      },
+      "delta": {
+        "precision_at_1": -0.0098,
+        "recall_at_2": -0.0071,
+        "mrr": -0.0068
+      }
+    },
+    "CE": {
+      "label": "CE v2",
+      "as_reported": {
+        "precision_at_1": 0.9387,
+        "recall_at_2": 0.9858,
+        "mrr": 0.967
+      },
+      "corrected": {
+        "precision_at_1": {
+          "point": 0.9481,
+          "ci_lo": 0.9151,
+          "ci_hi": 0.9764
+        },
+        "recall_at_2": {
+          "point": 0.9906,
+          "ci_lo": 0.9764,
+          "ci_hi": 1.0
+        },
+        "mrr": {
+          "point": 0.9725,
+          "ci_lo": 0.9552,
+          "ci_hi": 0.9874
+        }
+      },
+      "delta": {
+        "precision_at_1": 0.0094,
+        "recall_at_2": 0.0047,
+        "mrr": 0.0055
+      }
+    },
+    "Hybrid": {
+      "label": "Hybrid v2",
+      "as_reported": {
+        "precision_at_1": 0.9057,
+        "recall_at_2": 0.9858,
+        "mrr": 0.9501
+      },
+      "corrected": {
+        "precision_at_1": {
+          "point": 0.9269,
+          "ci_lo": 0.8892,
+          "ci_hi": 0.9575
+        },
+        "recall_at_2": {
+          "point": 0.9906,
+          "ci_lo": 0.9764,
+          "ci_hi": 1.0
+        },
+        "mrr": {
+          "point": 0.9615,
+          "ci_lo": 0.9414,
+          "ci_hi": 0.9788
+        }
+      },
+      "delta": {
+        "precision_at_1": 0.0212,
+        "recall_at_2": 0.0047,
+        "mrr": 0.0114
+      }
+    }
+  }
+}

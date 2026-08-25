@@ -1,0 +1,144 @@
+{
+  "metrics": {
+    "BASE": {
+      "trap_detection": 0.85,
+      "gold_recall": 0.95,
+      "fpr_at_1": 0.16666666666666666,
+      "mean_confidence": 0.9356250000000002,
+      "mean_output_tokens": 70.625
+    },
+    "WITH_COT": {
+      "trap_detection": 0.8,
+      "gold_recall": 1.0,
+      "fpr_at_1": 0.23333333333333334,
+      "mean_confidence": 0.9388750000000006,
+      "mean_output_tokens": 67.0375
+    },
+    "WITH_NEGATIVE_EXAMPLES": {
+      "trap_detection": 0.85,
+      "gold_recall": 0.95,
+      "fpr_at_1": 0.13333333333333333,
+      "mean_confidence": 0.9377500000000003,
+      "mean_output_tokens": 72.175
+    },
+    "WITH_STRICT_CONTAINMENT": {
+      "trap_detection": 0.85,
+      "gold_recall": 0.95,
+      "fpr_at_1": 0.16666666666666666,
+      "mean_confidence": 0.9346250000000005,
+      "mean_output_tokens": 70.375
+    },
+    "MINIMAL": {
+      "trap_detection": 0.85,
+      "gold_recall": 0.95,
+      "fpr_at_1": 0.18333333333333332,
+      "mean_confidence": 0.957750000000001,
+      "mean_output_tokens": 63.2375
+    }
+  },
+  "times": {
+    "BASE": 0.008350849151611328,
+    "WITH_COT": 0.006640911102294922,
+    "WITH_NEGATIVE_EXAMPLES": 0.009264945983886719,
+    "WITH_STRICT_CONTAINMENT": 0.005661487579345703,
+    "MINIMAL": 0.005829334259033203
+  },
+  "costs": {
+    "BASE": 0.0,
+    "WITH_COT": 0.0,
+    "WITH_NEGATIVE_EXAMPLES": 0.0,
+    "WITH_STRICT_CONTAINMENT": 0.0,
+    "MINIMAL": 0.0
+  },
+  "total_cost": 0.0,
+  "total_time": 0.04447817802429199,
+  "disagreements": [
+    {
+      "pair_idx": 21,
+      "case_idx": 5,
+      "pair_type": "trap",
+      "query": "What sport does Miroslav Milutinovi\u0107 play?",
+      "passage": " Milutinov represented the senior men's Serbian national basketball team for the first time, at the EuroBasket 2015, under the team's head coach Aleksandar \u0110or\u0111evi\u0107. In the first phase of the tournament, Serbia dominated in the toughest group of the tournament, Group B, with a 5\u20130 record, and they then eliminated Finland and the Czech Republic, in ",
+      "expected_relevant": false,
+      "verdicts": {
+        "BASE": false,
+        "WITH_COT": true,
+        "WITH_NEGATIVE_EXAMPLES": false,
+        "WITH_STRICT_CONTAINMENT": false,
+        "MINIMAL": false
+      },
+      "reasonings": {
+        "BASE": "The passage discusses Milutinov (a Serbian basketball player), not Miroslav Milutinovi\u0107; while they share a similar surname, they appear to be different individuals, and the question's specific name does not match the passage's subject.",
+        "WITH_COT": "The passage discusses a Serbian basketball player with the surname Milutinov at EuroBasket 2015, which very likely refers to Miroslav Milutinovi\u0107, and clearly states the sport as basketball.",
+        "WITH_NEGATIVE_EXAMPLES": "The passage discusses Milutinov (a basketball player at EuroBasket 2015), but the question asks about Miroslav Milutinovi\u0107; while these names are similar, they appear to refer to different individuals, and without confirmation of shared identity, this represents a potential surname similarity trap.",
+        "WITH_STRICT_CONTAINMENT": "The passage discusses Milutinov (a Serbian basketball player), not Miroslav Milutinovi\u0107; while they share a surname and similar names, they appear to be different individuals, and without confirmation this is the same person, topic match cannot be established.",
+        "MINIMAL": "The passage discusses 'Milutinov' at EuroBasket 2015, but the question asks about 'Miroslav Milutinovi\u0107' - these appear to be different individuals (different name spellings/forms), so there is no confirmed topic match despite both being basketball players."
+      },
+      "confidences": {
+        "BASE": 0.85,
+        "WITH_COT": 0.85,
+        "WITH_NEGATIVE_EXAMPLES": 0.85,
+        "WITH_STRICT_CONTAINMENT": 0.85,
+        "MINIMAL": 0.85
+      }
+    },
+    {
+      "pair_idx": 33,
+      "case_idx": 8,
+      "pair_type": "trap",
+      "query": "Who was the director of The Return?",
+      "passage": " Return is a 2011 independent film about an American reservist, wife and mother returning home from her tour of duty in the Middle East. The film was written and directed by Liza Johnson, and stars Linda Cardellini, Michael Shannon and John Slattery. It is Johnson's first feature-length film, and received good reviews at its premiere at the Cannes ",
+      "expected_relevant": false,
+      "verdicts": {
+        "BASE": false,
+        "WITH_COT": true,
+        "WITH_NEGATIVE_EXAMPLES": false,
+        "WITH_STRICT_CONTAINMENT": false,
+        "MINIMAL": false
+      },
+      "reasonings": {
+        "BASE": "The passage discusses a film titled 'Return' (2011) directed by Liza Johnson, but the question asks about 'The Return,' which is a different film title and may refer to a different work entirely.",
+        "WITH_COT": "The passage explicitly identifies Liza Johnson as the director of the 2011 film 'Return' about an American reservist, which matches the question's subject despite the minor title variation.",
+        "WITH_NEGATIVE_EXAMPLES": "The passage discusses a film titled 'Return' (2011) directed by Liza Johnson, but the question asks about 'The Return,' which is a different film; the similar titles create a similarity trap where the passage may not address the specific film in question.",
+        "WITH_STRICT_CONTAINMENT": "The passage discusses a film titled 'Return' (2011) directed by Liza Johnson, but the question asks about 'The Return,' which is a different film title and may refer to a different work.",
+        "MINIMAL": "The passage discusses a film titled 'Return' (2011), not 'The Return', which appears to be a different film entity."
+      },
+      "confidences": {
+        "BASE": 0.85,
+        "WITH_COT": 0.88,
+        "WITH_NEGATIVE_EXAMPLES": 0.85,
+        "WITH_STRICT_CONTAINMENT": 0.85,
+        "MINIMAL": 0.85
+      }
+    },
+    {
+      "pair_idx": 65,
+      "case_idx": 16,
+      "pair_type": "trap",
+      "query": "What genre is Tempting The Gods: The Selected Stories of Tanith Lee, Volume 1?",
+      "passage": " Hunting The Shadows: The Selected Stories of Tanith Lee, Volume Two is a 2009 collection of 12 fantasy and science fiction short stories by author Tanith Lee, published by Wildside Press. Only one story, \"Queens in Crimson\", is a previously unpublished work. The book includes an introduction by Donald Wollheim. Most of the stories of the volume we",
+      "expected_relevant": false,
+      "verdicts": {
+        "BASE": true,
+        "WITH_COT": false,
+        "WITH_NEGATIVE_EXAMPLES": true,
+        "WITH_STRICT_CONTAINMENT": true,
+        "MINIMAL": true
+      },
+      "reasonings": {
+        "BASE": "The passage discusses 'Hunting The Shadows: The Selected Stories of Tanith Lee, Volume Two' and explicitly states it is a 'collection of 12 fantasy and science fiction short stories,' while also confirming that 'Volume one, titled Tempting The Gods' exists, establishing that Volume 1 is the same type of collection with the same genres (fantasy and science fiction).",
+        "WITH_COT": "The passage mentions Tempting The Gods, Volume 1 by name but only states the genre of Volume Two (fantasy and science fiction), not explicitly the genre of Volume One.",
+        "WITH_NEGATIVE_EXAMPLES": "The passage discusses 'Hunting The Shadows: The Selected Stories of Tanith Lee, Volume Two' and explicitly mentions that 'Volume one, titled Tempting The Gods' contains fantasy and science fiction stories, directly answering the genre question for the correct work.",
+        "WITH_STRICT_CONTAINMENT": "The passage explicitly states that Volume one is 'Tempting The Gods' and describes Volume Two as a 'collection of fantasy and science fiction short stories,' establishing the genre for the series.",
+        "MINIMAL": "The passage discusses Volume Two of the series and explicitly mentions that Volume One is titled 'Tempting The Gods,' and indicates it is part of a fantasy and science fiction short story collection series, allowing inference of the genre."
+      },
+      "confidences": {
+        "BASE": 0.95,
+        "WITH_COT": 0.88,
+        "WITH_NEGATIVE_EXAMPLES": 0.92,
+        "WITH_STRICT_CONTAINMENT": 0.85,
+        "MINIMAL": 0.85
+      }
+    }
+  ]
+}

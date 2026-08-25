@@ -1,0 +1,36 @@
+{
+  "n_cases": 136,
+  "trap_detection_rate": 0.9559,
+  "gold_recall": 0.5809,
+  "fpr_at_1": 0.0441,
+  "fpr_note": "Trap-only FPR: (trap passages classified CORRECT) / n. Denominator = 136.",
+  "trap_score_median": -1.0116,
+  "trap_score_max": 1.0084,
+  "trap_score_min": -1.0553,
+  "gold_score_median": 0.8751,
+  "per_trap_type": {
+    "topic_overlap": {
+      "total": 66,
+      "trap_detected": 62,
+      "trap_detection_rate": 0.9394,
+      "gold_correct": 41,
+      "gold_recall": 0.6212
+    },
+    "entity_alias": {
+      "total": 26,
+      "trap_detected": 24,
+      "trap_detection_rate": 0.9231,
+      "gold_correct": 13,
+      "gold_recall": 0.5
+    },
+    "unknown": {
+      "total": 44,
+      "trap_detected": 44,
+      "trap_detection_rate": 1.0,
+      "gold_correct": 25,
+      "gold_recall": 0.5682
+    }
+  },
+  "model_path": "/home/giorgoszarafona/projects/thesis/external/CRAG/models/evaluator",
+  "total_elapsed_s": 362.1
+}

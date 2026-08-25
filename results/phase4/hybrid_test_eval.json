@@ -1,0 +1,41 @@
+{
+  "n_cases": 136,
+  "precision_at_1": 0.875,
+  "recall_at_2": 0.9632,
+  "mrr": 0.9301,
+  "fpr_at_1": 0.0882,
+  "trap_detection_rate": 0.9118,
+  "gold_recall": 0.9265,
+  "latency_median_s": 0.026,
+  "latency_p95_s": 0.058,
+  "per_trap_type": {
+    "topic_overlap": {
+      "total": 66,
+      "detected": 61,
+      "detection_rate": 0.9242
+    },
+    "entity_alias": {
+      "total": 26,
+      "detected": 19,
+      "detection_rate": 0.7308
+    },
+    "unknown": {
+      "total": 44,
+      "detected": 44,
+      "detection_rate": 1.0
+    }
+  },
+  "ce_model": "/home/giorgoszarafona/projects/thesis/models/cross_encoder_best",
+  "high_threshold": 0.8,
+  "low_threshold": 0.2,
+  "total_elapsed_s": 16.1,
+  "routing": {
+    "total_passages": 544,
+    "ce_decisive": 382,
+    "ce_decisive_pct": 0.7022,
+    "llm_escalated": 162,
+    "llm_escalated_pct": 0.2978,
+    "new_llm_api_calls": 0,
+    "estimated_cost_usd": 0.0
+  }
+}

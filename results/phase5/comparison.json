@@ -1,0 +1,224 @@
+{
+  "T5": {
+    "n_cases": 212,
+    "metrics": {
+      "precision_at_1": {
+        "point": 0.7972,
+        "ci_lo": 0.7406,
+        "ci_hi": 0.8491
+      },
+      "recall_at_2": {
+        "point": 0.9009,
+        "ci_lo": 0.8585,
+        "ci_hi": 0.9387
+      },
+      "mrr": {
+        "point": 0.8785,
+        "ci_lo": 0.8439,
+        "ci_hi": 0.9116
+      },
+      "fpr_at_1": {
+        "point": 0.033,
+        "ci_lo": 0.0142,
+        "ci_hi": 0.0566
+      },
+      "trap_detection_rate": {
+        "point": 0.967,
+        "ci_lo": 0.9434,
+        "ci_hi": 0.9858
+      },
+      "gold_recall": {
+        "point": 0.5802,
+        "ci_lo": 0.5189,
+        "ci_hi": 0.6462
+      },
+      "tt_topic_overlap_trap_det": {
+        "point": 0.9881,
+        "ci_lo": 0.961,
+        "ci_hi": 1.0
+      },
+      "tt_entity_alias_trap_det": {
+        "point": 0.9221,
+        "ci_lo": 0.8608,
+        "ci_hi": 0.9747
+      },
+      "tt_unknown_trap_det": {
+        "point": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0
+      }
+    },
+    "latency": {
+      "latency_median_s": 0.485,
+      "latency_p95_s": 0.999
+    }
+  },
+  "LLM": {
+    "n_cases": 212,
+    "metrics": {
+      "precision_at_1": {
+        "point": 0.9104,
+        "ci_lo": 0.8726,
+        "ci_hi": 0.9481
+      },
+      "recall_at_2": {
+        "point": 0.9764,
+        "ci_lo": 0.9528,
+        "ci_hi": 0.9953
+      },
+      "mrr": {
+        "point": 0.9509,
+        "ci_lo": 0.93,
+        "ci_hi": 0.9705
+      },
+      "fpr_at_1": {
+        "point": 0.0991,
+        "ci_lo": 0.0613,
+        "ci_hi": 0.1415
+      },
+      "trap_detection_rate": {
+        "point": 0.9009,
+        "ci_lo": 0.8585,
+        "ci_hi": 0.9387
+      },
+      "gold_recall": {
+        "point": 0.934,
+        "ci_lo": 0.8962,
+        "ci_hi": 0.967
+      },
+      "tt_topic_overlap_trap_det": {
+        "point": 0.9167,
+        "ci_lo": 0.8523,
+        "ci_hi": 0.9688
+      },
+      "tt_entity_alias_trap_det": {
+        "point": 0.8442,
+        "ci_lo": 0.75,
+        "ci_hi": 0.9219
+      },
+      "tt_unknown_trap_det": {
+        "point": 0.9608,
+        "ci_lo": 0.8947,
+        "ci_hi": 1.0
+      }
+    },
+    "latency": {
+      "latency_median_s": 1.204,
+      "latency_p95_s": 1.872
+    }
+  },
+  "CE": {
+    "n_cases": 212,
+    "metrics": {
+      "precision_at_1": {
+        "point": 0.9387,
+        "ci_lo": 0.9057,
+        "ci_hi": 0.967
+      },
+      "recall_at_2": {
+        "point": 0.9858,
+        "ci_lo": 0.967,
+        "ci_hi": 1.0
+      },
+      "mrr": {
+        "point": 0.967,
+        "ci_lo": 0.9481,
+        "ci_hi": 0.9827
+      },
+      "fpr_at_1": {
+        "point": 0.1085,
+        "ci_lo": 0.0708,
+        "ci_hi": 0.1557
+      },
+      "trap_detection_rate": {
+        "point": 0.8915,
+        "ci_lo": 0.8443,
+        "ci_hi": 0.9292
+      },
+      "gold_recall": {
+        "point": 0.9104,
+        "ci_lo": 0.8679,
+        "ci_hi": 0.9434
+      },
+      "tt_topic_overlap_trap_det": {
+        "point": 0.9643,
+        "ci_lo": 0.9157,
+        "ci_hi": 1.0
+      },
+      "tt_entity_alias_trap_det": {
+        "point": 0.7662,
+        "ci_lo": 0.6585,
+        "ci_hi": 0.8493
+      },
+      "tt_unknown_trap_det": {
+        "point": 0.9608,
+        "ci_lo": 0.902,
+        "ci_hi": 1.0
+      }
+    },
+    "latency": {
+      "latency_median_s": 0.025,
+      "latency_p95_s": 0.049
+    }
+  },
+  "Hybrid": {
+    "n_cases": 212,
+    "metrics": {
+      "precision_at_1": {
+        "point": 0.9057,
+        "ci_lo": 0.8632,
+        "ci_hi": 0.9434
+      },
+      "recall_at_2": {
+        "point": 0.9858,
+        "ci_lo": 0.967,
+        "ci_hi": 1.0
+      },
+      "mrr": {
+        "point": 0.9501,
+        "ci_lo": 0.9269,
+        "ci_hi": 0.9697
+      },
+      "fpr_at_1": {
+        "point": 0.0991,
+        "ci_lo": 0.066,
+        "ci_hi": 0.1415
+      },
+      "trap_detection_rate": {
+        "point": 0.9009,
+        "ci_lo": 0.8585,
+        "ci_hi": 0.9387
+      },
+      "gold_recall": {
+        "point": 0.9434,
+        "ci_lo": 0.9057,
+        "ci_hi": 0.9717
+      },
+      "tt_topic_overlap_trap_det": {
+        "point": 0.9643,
+        "ci_lo": 0.9167,
+        "ci_hi": 1.0
+      },
+      "tt_entity_alias_trap_det": {
+        "point": 0.7792,
+        "ci_lo": 0.6753,
+        "ci_hi": 0.8625
+      },
+      "tt_unknown_trap_det": {
+        "point": 0.9804,
+        "ci_lo": 0.9362,
+        "ci_hi": 1.0
+      }
+    },
+    "latency": {
+      "latency_median_s": 0.025,
+      "latency_p95_s": 0.048
+    },
+    "routing": {
+      "total_passages": 848,
+      "ce_decisive": 759,
+      "llm_escalated": 89,
+      "llm_pct": 0.105
+    }
+  }
+}

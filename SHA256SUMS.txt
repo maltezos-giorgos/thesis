@@ -1,0 +1,2 @@
+73aacc434c0769d4e7cc800160dbfed594d6dee5e59dcdd8e6e81f2978830a02  models/cross_encoder_v2/model.safetensors
+6233952ec487c9eb229b6ff2efdadd497c203567b707a6af1df073a366b29153  models/cross_encoder_best/model.safetensors

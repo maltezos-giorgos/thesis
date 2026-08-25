@@ -26,7 +26,6 @@ data/hard_cases/*
 
 # Models and results
 models/
-results/
 
 # Tools
 .pytest_cache/

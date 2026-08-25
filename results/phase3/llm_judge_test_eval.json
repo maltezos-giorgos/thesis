@@ -1,0 +1,33 @@
+{
+  "n_cases": 136,
+  "precision_at_1": 0.9044,
+  "recall_at_2": 0.9559,
+  "mrr": 0.943,
+  "fpr_at_1": 0.1471,
+  "fpr_note": "Trap-only FPR: (trap passages labeled relevant) / (total trap passages). Denominator = 136.",
+  "trap_detection_rate": 0.8529,
+  "gold_recall": 0.9191,
+  "latency_median_s": 1.212,
+  "latency_p95_s": 1.775,
+  "per_trap_type": {
+    "topic_overlap": {
+      "total": 66,
+      "detected": 55,
+      "detection_rate": 0.8333333333333334
+    },
+    "entity_alias": {
+      "total": 26,
+      "detected": 17,
+      "detection_rate": 0.6538461538461539
+    },
+    "unknown": {
+      "total": 44,
+      "detected": 44,
+      "detection_rate": 1.0
+    }
+  },
+  "total_api_calls": 544,
+  "estimated_cost_usd": 0.3264,
+  "total_elapsed_s": 694.7,
+  "variant": "WITH_NEGATIVE_EXAMPLES"
+}

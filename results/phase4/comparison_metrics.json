@@ -1,0 +1,32 @@
+{
+  "t5": {
+    "trap_detection_rate": 0.9559,
+    "gold_recall": 0.5809,
+    "fpr_at_1": 0.0441
+  },
+  "llm": {
+    "trap_detection_rate": 0.8529,
+    "gold_recall": 0.9191,
+    "fpr_at_1": 0.1471
+  },
+  "ce": {
+    "trap_detection_rate": 0.9191,
+    "gold_recall": 0.7868,
+    "fpr_at_1": 0.0809
+  },
+  "hybrid": {
+    "trap_detection_rate": 0.9118,
+    "gold_recall": 0.9265,
+    "fpr_at_1": 0.0882
+  },
+  "hybrid_routing": {
+    "total_passages": 544,
+    "ce_decisive": 382,
+    "ce_decisive_pct": 0.7022,
+    "llm_escalated": 162,
+    "llm_escalated_pct": 0.2978,
+    "new_llm_api_calls": 0,
+    "estimated_cost_usd": 0.0
+  },
+  "n_case_studies": 3
+}
